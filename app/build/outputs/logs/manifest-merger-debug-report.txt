@@ -1,0 +1,138 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:1-30:12
+MERGED from [com.android.support:design:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/df047301994882e70d3418a0d592b027/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7d51d08dc5ca5f40fe49acbb1a8a943/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/3c6dd662fe4a7cb1e446e8ed941e1ed7/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f945f9a00c5f50ee8f38631214127da8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/ff1b8f8525fa82d68de65bce17ad2a81/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/582b743bcb09d57774aa62f2eb9e11fc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/f58cba5dda3f3d9ec8bef389d4cee8b2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/9437d6881098f0e0ce3cb6f7eae5911e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/153beea6caaa1ad89372de03ed79e7ee/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/194e55b0ff37fdd0c922dfbdea1259ac/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/819a5b40ea728ffeadc2af039de72c94/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/a0d2fb3a8dcb1b2abfd6445f809156d9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af5ebafc5222de7e3cbb0756452ffb75/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/482d05f5f5c628a4c510b74549c9e7b8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/dfd0e76ee0b2cb5bff12571c5f6d5e71/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7b78cde7fd0b7f07a1b2e9b22fe4a2c0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b5fc6fbe34848bdd7b0e632f6615269e/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:1-30:12
+	package
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:3:5-46
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:1-30:12
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:1-30:12
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:6:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:7:5-71
+	android:name
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:7:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:8:5-72
+	android:name
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:8:22-69
+application
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:10:5-28:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/3c6dd662fe4a7cb1e446e8ed941e1ed7/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/3c6dd662fe4a7cb1e446e8ed941e1ed7/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:15:9-35
+	android:label
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:13:9-41
+	android:roundIcon
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:14:9-54
+	android:icon
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:12:9-43
+	android:allowBackup
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:16:9-40
+activity#com.example.santiago.votaciones.ActInicio
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:17:9-23:20
+	android:name
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:17:19-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:21:27-74
+activity#com.example.santiago.votaciones.ActMenuAdmin
+ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:24:9-27:68
+	android:label
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:26:13-66
+	android:theme
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:27:13-56
+	android:name
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml:25:13-41
+uses-sdk
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/df047301994882e70d3418a0d592b027/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/df047301994882e70d3418a0d592b027/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7d51d08dc5ca5f40fe49acbb1a8a943/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7d51d08dc5ca5f40fe49acbb1a8a943/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/3c6dd662fe4a7cb1e446e8ed941e1ed7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.0.aar/3c6dd662fe4a7cb1e446e8ed941e1ed7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f945f9a00c5f50ee8f38631214127da8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/f945f9a00c5f50ee8f38631214127da8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/ff1b8f8525fa82d68de65bce17ad2a81/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/ff1b8f8525fa82d68de65bce17ad2a81/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/582b743bcb09d57774aa62f2eb9e11fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/582b743bcb09d57774aa62f2eb9e11fc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/f58cba5dda3f3d9ec8bef389d4cee8b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/f58cba5dda3f3d9ec8bef389d4cee8b2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/9437d6881098f0e0ce3cb6f7eae5911e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/9437d6881098f0e0ce3cb6f7eae5911e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/153beea6caaa1ad89372de03ed79e7ee/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/153beea6caaa1ad89372de03ed79e7ee/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/194e55b0ff37fdd0c922dfbdea1259ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/194e55b0ff37fdd0c922dfbdea1259ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/819a5b40ea728ffeadc2af039de72c94/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/819a5b40ea728ffeadc2af039de72c94/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/a0d2fb3a8dcb1b2abfd6445f809156d9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/a0d2fb3a8dcb1b2abfd6445f809156d9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af5ebafc5222de7e3cbb0756452ffb75/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/santiago/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af5ebafc5222de7e3cbb0756452ffb75/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/482d05f5f5c628a4c510b74549c9e7b8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/482d05f5f5c628a4c510b74549c9e7b8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/dfd0e76ee0b2cb5bff12571c5f6d5e71/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/dfd0e76ee0b2cb5bff12571c5f6d5e71/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7b78cde7fd0b7f07a1b2e9b22fe4a2c0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7b78cde7fd0b7f07a1b2e9b22fe4a2c0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b5fc6fbe34848bdd7b0e632f6615269e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/santiago/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b5fc6fbe34848bdd7b0e632f6615269e/AndroidManifest.xml:20:5-44
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+		ADDED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
+		INJECTED from /home/santiago/AndroidStudioProjects/Votaciones/app/src/main/AndroidManifest.xml
