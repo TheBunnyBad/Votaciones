@@ -241,14 +241,22 @@ public class App {
     }
 
     public static void borrarCandidato(Candidato c){
-        for(Candidato i : candidatos)if(i.getDNI().equals(c.getDNI())) candidatos.remove(i);
-        sqLiteDatabase.execSQL("DELETE FROM " + DBHelper.NAME_TB_CANDIDATOS + " WHERE DNI=" + c.getDNI());
+        for(Candidato i : candidatos){
+            if(i.getDNI().equals(c.getDNI())) {
+                open();
+                candidatos.remove(i);
+                sqLiteDatabase.execSQL("DELETE FROM " + DBHelper.NAME_TB_CANDIDATOS + " WHERE DNI=" + c.getDNI());
+                close();
+            }
+        }
     }
 
     public static void reiniciarApp(Context ctx){
+        open();
         sqLiteDatabase.execSQL("DELETE FROM " + DBHelper.NAME_TB_CANDIDATOS);
         sqLiteDatabase.execSQL("DELETE FROM " + DBHelper.NAME_TB_VOTOS);
         sqLiteDatabase.execSQL("DELETE FROM " + DBHelper.NAME_TB_PERSONAS);
+        close();
         initApp(ctx);
     }
 

@@ -51,6 +51,7 @@ public class fgHome extends Fragment {
                     public void onClick(DialogInterface dialog, int id) {
                         Candidato c = App.getCandidatos().get(position);
                         App.borrarCandidato(c);
+                        switchLv(lv);
                     }
                 }).setNeutralButton("NO", new DialogInterface.OnClickListener() {
                     @Override
