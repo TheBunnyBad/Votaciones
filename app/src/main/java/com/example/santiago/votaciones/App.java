@@ -25,8 +25,9 @@ public class App {
     private static SQLiteDatabase sqLiteDatabase;
 
     //// ARRAYLIST PARA CONTROLAR LOS DATOS
-    private static ArrayList<Candidato> candidatos = new ArrayList<>();
-    private static ArrayList<Ciudadano> ciudadanos = new ArrayList<>();
+    private static ArrayList<Candidato> candidatos;
+    private static ArrayList<Ciudadano> ciudadanos;
+    private static ArrayList<Voto> votos;
 
     //// NOMBRE DE LAS SHAREDPREFS
     private static final String MY_PREFERENCES_NAME = "SHAREDPREF_PASS_KEY";
@@ -62,10 +63,24 @@ public class App {
         sqLiteDatabase = dbhelper.getReadableDatabase();
         cargarCandidatos();
         cargarCiudadanos();
+        cargarVotos();
         close();
     }
 
+    private static void cargarVotos(){
+        votos = new ArrayList<>();
+        String columns[] = {"id", "DNIcandidato", "DNIciudadano"};
+        Cursor cursor = sqLiteDatabase.query(DBHelper.NAME_TB_VOTOS, columns,
+                null, null, null, null, null);
+        while(cursor.moveToNext()){
+            votos.add(new Voto(cursor.getInt(cursor.getColumnIndex("id")),
+                    cursor.getString(cursor.getColumnIndex("DNIcandidato")),
+                    cursor.getString(cursor.getColumnIndex("DNIciudadano"))));
+        }
+    }
+
     private static void cargarCandidatos(){
+        candidatos = new ArrayList<>();
         String columns[] = {"Nombre", "DNI", "Partido", "urlImg"};
         Cursor cursor = sqLiteDatabase.query(DBHelper.NAME_TB_CANDIDATOS,
                 columns,
@@ -79,6 +94,7 @@ public class App {
     }
 
     private static void cargarCiudadanos(){
+        ciudadanos  = new ArrayList<>();
         String columns[] = {"Nombre", "DNI"};
         Cursor cursor = sqLiteDatabase.query(DBHelper.NAME_TB_PERSONAS,
                 columns,
@@ -114,6 +130,15 @@ public class App {
         }
     }
 
+    public static boolean votoExistente(Context ctx, Ciudadano c){
+        for(Voto v : votos){
+            if(v.getDNIciudadano().equals(c.getDNI())){
+                Toast.makeText(ctx, "CIUDADANO YA VOTÓ", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        }
+        return false;
+    }
     /**
      * Muestra un AlertDialog con dos botones:
      * Uno que resetea la contraseña
@@ -214,6 +239,36 @@ public class App {
 
         }
     }
+
+    public static void borrarCandidato(Candidato c){
+        for(Candidato i : candidatos)if(i.getDNI().equals(c.getDNI())) candidatos.remove(i);
+        sqLiteDatabase.execSQL("DELETE FROM " + DBHelper.NAME_TB_CANDIDATOS + " WHERE DNI=" + c.getDNI());
+    }
+
+    public static void reiniciarApp(Context ctx){
+        sqLiteDatabase.execSQL("DELETE FROM " + DBHelper.NAME_TB_CANDIDATOS);
+        sqLiteDatabase.execSQL("DELETE FROM " + DBHelper.NAME_TB_VOTOS);
+        sqLiteDatabase.execSQL("DELETE FROM " + DBHelper.NAME_TB_PERSONAS);
+        initApp(ctx);
+    }
+
+    public static void guardarVoto(Context ctx, Voto voto){
+        votos.add(voto);
+        open();
+        sqLiteDatabase.insert(DBHelper.NAME_TB_VOTOS, null, voto.getContentValues());
+    }
+
+    public static int contarVotos(Candidato cand){
+        if(getVotos().size() < 1) return 0;
+        open();
+        Cursor count = sqLiteDatabase.rawQuery("SELECT COUNT(*) FROM " +
+                DBHelper.NAME_TB_VOTOS + " WHERE DNIcandidato=" + cand.getDNI(), null);
+        count.moveToFirst();
+        int contador = count.getInt(0);
+        close();
+        return contador;
+    }
+
     //////////////////////////////////////////////////
     //// CAPSULED FIELDS
     //////////////////////////////////////////////////
@@ -226,4 +281,11 @@ public class App {
     public static ArrayList<Candidato> getCandidatos(){ return candidatos; }
 
     public static ArrayList<Ciudadano> getCiudadanos(){ return ciudadanos;  }
+
+    public static ArrayList<Voto> getVotos(){   return votos;   }
+
+    private static String dniVotante = "";
+    public static void setDNIVotante(String dni){   dniVotante = dni;   }
+    public static String getDNIVotante(){   return dniVotante;  }
+    public static void restartDNIVotante(){ dniVotante = "";    }
 }

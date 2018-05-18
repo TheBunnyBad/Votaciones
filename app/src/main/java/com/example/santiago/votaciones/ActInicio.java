@@ -2,6 +2,7 @@ package com.example.santiago.votaciones;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +13,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class ActInicio extends AppCompatActivity {
 
@@ -42,6 +53,10 @@ public class ActInicio extends AppCompatActivity {
         Button botonCiudadano = findViewById(R.id.btnAccionCiudadano);
         botonCiudadano.setText(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? "REGISTRAR CÉDULA" : "VOTAR");
         botonCiudadano.setOnClickListener(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? registrarCedula() : irAVotaciones());
+
+        if(App.getAppMode().equals(App.APP_MODE_VOTACIONES)){
+            mostrarEstadisticasEnVivo();
+        }
     }
 
 
@@ -54,6 +69,7 @@ public class ActInicio extends AppCompatActivity {
                     App.guardarCiudadano(getApplicationContext(),
                             new Ciudadano(((EditText) findViewById(R.id.txtNombre)).getText().toString(),
                                             ((EditText) findViewById(R.id.txtCedula)).getText().toString()));
+                    Tools.restartEdiTexts(form);
                 }
             }
         };
@@ -63,10 +79,11 @@ public class ActInicio extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(App.ciudadanoRegistrado(new Ciudadano("ANON",
-                        ((EditText)findViewById(R.id.txtCedula)).getText().toString()))){
-                    startActivity(new Intent(getApplicationContext(), ActInicio.class));
+                Ciudadano ciud = new Ciudadano("ANON",((EditText)findViewById(R.id.txtCedula)).getText().toString());
+                if(!App.votoExistente(getApplicationContext(), ciud) && App.ciudadanoRegistrado(ciud)){
+                    startActivity(new Intent(getApplicationContext(), ActVotar.class));
                     finish();
+                    App.setDNIVotante(((EditText)findViewById(R.id.txtCedula)).getText().toString());
                 }
             }
         };
@@ -95,4 +112,29 @@ public class ActInicio extends AppCompatActivity {
         alertDialogBuilder.create()
                 .show();
     }
+
+    /**
+     * Dibuja los resultados en la activity
+     */
+    private void mostrarEstadisticasEnVivo() {
+        PieChart pieChart = (PieChart)findViewById(R.id.pie);
+        List<PieEntry> pieEntries = new ArrayList<>();
+        for(Candidato c : App.getCandidatos()) {
+            pieEntries.add(new PieEntry(
+                    Float.parseFloat(App.contarVotos(c) + ""), c.getNombre()));
+        }
+        PieDataSet set = new PieDataSet(pieEntries, "Elecciones");
+        PieData data = new PieData(set);
+
+        int colors[] = new int[App.getCandidatos().size()];
+        Random random = new Random();
+        for(int i = 0; i < colors.length; i++) {
+            colors[i] = Color.rgb(random.nextInt(255),random.nextInt(255),random.nextInt(255));
+        }
+
+        set.setColors(ColorTemplate.VORDIPLOM_COLORS);
+        pieChart.setData(data);
+        pieChart.invalidate();
+    }
+
 }

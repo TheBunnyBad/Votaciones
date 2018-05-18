@@ -50,6 +50,7 @@ public class fgAdministrarApp extends Fragment {
             public void onClick(View v) {
                 App.switchAppMode(getContext());
                 updateUI();
+                if(App.getAppMode().equals(App.APP_MODE_REGISTRO)) App.reiniciarApp(getContext());
             }
         });
     }
