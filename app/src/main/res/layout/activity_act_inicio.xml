@@ -11,7 +11,7 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese su cédula"/>
+        android:hint="Ingrese su nombre"/>
 
     <EditText
         android:id="@+id/txtCedula"
@@ -19,7 +19,7 @@
         android:layout_below="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese su nombre"/>
+        android:hint="Ingrese su cédula"/>
 
     <Button
         android:id="@+id/btnAccionCiudadano"

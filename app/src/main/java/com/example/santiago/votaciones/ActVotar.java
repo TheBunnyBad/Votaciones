@@ -9,5 +9,8 @@ public class ActVotar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_votar);
+        CustomAdapterCandidato ca = new CustomAdapterCandidato(this, App.getCandidatos());
+        
+
     }
 }

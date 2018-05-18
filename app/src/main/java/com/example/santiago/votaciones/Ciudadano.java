@@ -7,7 +7,7 @@ public class Ciudadano {
     protected String DNI;
 
     public Ciudadano(String nombre, String dni){
-        this.nombre = dni;
+        this.nombre = nombre;
         this.DNI = dni;
     }
 

@@ -175,9 +175,15 @@ public class App {
         AppMode = restoredText;
     }
 
+    private static void saveAppMode(Context c){
+        SharedPreferences prefs = c.getSharedPreferences(MY_PREFERENCES_NAME,
+                Context.MODE_PRIVATE);
+        prefs.edit().putString(MY_PREFERENCES_APP_MODE_KEY, AppMode).apply();
+    }
+
     public static void switchAppMode(Context c){
         AppMode = (AppMode.equals(APP_MODE_REGISTRO)) ? APP_MODE_VOTACIONES : APP_MODE_REGISTRO;
-        initApp(c);
+        saveAppMode(c);
     }
 
     public static void guardarCandidato(Context ctx, Candidato cand) {

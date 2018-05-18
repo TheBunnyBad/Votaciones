@@ -56,10 +56,8 @@ public class fgAdministrarApp extends Fragment {
 
     private void updateUI(){
         Button btnCambiarModo = getView().findViewById(R.id.btnCambiarModoApp);
-        btnCambiarModo.setText(btnCambiarModo
-                .getText()
-                .toString()
-                .replace("@", btnCambiarModo.getText().toString().equals(App.APP_MODE_REGISTRO) ? App.APP_MODE_VOTACIONES : App.APP_MODE_REGISTRO));
+        btnCambiarModo.setText(btnCambiarModo.getText().toString().substring(0, 5)
+                                + App.getAppMode());
     }
 }
 

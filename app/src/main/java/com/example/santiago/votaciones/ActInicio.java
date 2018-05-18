@@ -38,7 +38,7 @@ public class ActInicio extends AppCompatActivity {
                 });
 
         ((EditText)findViewById(R.id.txtNombre))
-                .setEnabled(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? true : false);
+                .setVisibility(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? View.VISIBLE : View.GONE);
         Button botonCiudadano = findViewById(R.id.btnAccionCiudadano);
         botonCiudadano.setText(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? "REGISTRAR CÉDULA" : "VOTAR");
         botonCiudadano.setOnClickListener(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? registrarCedula() : irAVotaciones());
@@ -53,7 +53,7 @@ public class ActInicio extends AppCompatActivity {
                 if(Tools.formularioDiligenciado(form)) {
                     App.guardarCiudadano(getApplicationContext(),
                             new Ciudadano(((EditText) findViewById(R.id.txtNombre)).getText().toString(),
-                                            ((EditText) findViewById(R.id.txtNombre)).getText().toString()));
+                                            ((EditText) findViewById(R.id.txtCedula)).getText().toString()));
                 }
             }
         };
@@ -66,6 +66,7 @@ public class ActInicio extends AppCompatActivity {
                 if(App.ciudadanoRegistrado(new Ciudadano("ANON",
                         ((EditText)findViewById(R.id.txtCedula)).getText().toString()))){
                     startActivity(new Intent(getApplicationContext(), ActInicio.class));
+                    finish();
                 }
             }
         };
