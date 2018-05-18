@@ -121,8 +121,7 @@ public class App {
      * @param c es el contexto de la aplicación en la que se va a mostrar el diálogo. En este
      *          caso, en el inicio de la aplicación
      */
-    private static void alertDialogForPass(final Context c){
-        Tools.
+    public static void alertDialogForPass(final Context c){
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(c);
 
         final EditText et = new EditText(c);

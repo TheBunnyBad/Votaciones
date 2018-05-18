@@ -9,29 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txtApoyoPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/etPass"
+        <Button
+            android:text="Cambiar contraseña"
+            android:id="@+id/btnCambiarPass"
             android:gravity="center"
-            android:layout_below="@+id/txtApoyoPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/btnGuardarNuevoPass"
-            android:gravity="center"
-            android:layout_below="@id/etPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
+            android:text="MODO: @"
             android:id="@+id/btnCambiarModoApp"
             android:gravity="center"
-            android:layout_below="@id/etPass"
+            android:layout_below="@id/btnCambiarPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

@@ -19,7 +19,7 @@
         android:layout_below="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese su cédula"/>
+        android:hint="Ingrese su nombre"/>
 
     <Button
         android:id="@+id/btnAccionCiudadano"

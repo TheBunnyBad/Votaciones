@@ -24,7 +24,8 @@
         <activity
             android:name=".ActMenuAdmin"
             android:label="@string/title_activity_act_menu_admin"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActVotar"></activity>
     </application>
 
 </manifest>

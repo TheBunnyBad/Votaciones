@@ -49,8 +49,12 @@ public class ActInicio extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                App.guardarCiudadano(getApplicationContext(), new Ciudadano(((EditText)findViewById(R.id.txtNombre)).getText().toString(),
-                        ((EditText)findViewById(R.id.txtNombre)).getText().toString()));
+                EditText form[] = {findViewById(R.id.txtCedula), findViewById(R.id.txtNombre)};
+                if(Tools.formularioDiligenciado(form)) {
+                    App.guardarCiudadano(getApplicationContext(),
+                            new Ciudadano(((EditText) findViewById(R.id.txtNombre)).getText().toString(),
+                                            ((EditText) findViewById(R.id.txtNombre)).getText().toString()));
+                }
             }
         };
     }
@@ -60,7 +64,9 @@ public class ActInicio extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(App.ciudadanoRegistrado(new Ciudadano("ANON",
-                        ((EditText)findViewById(R.id.txtCedula)).getText().toString())));
+                        ((EditText)findViewById(R.id.txtCedula)).getText().toString()))){
+                    startActivity(new Intent(getApplicationContext(), ActInicio.class));
+                }
             }
         };
     }

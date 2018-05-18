@@ -1572,6 +1572,10 @@
         "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\55254f7b0ef330914b2e5b6b92dd4572\\res\\color-v23\\abc_tint_switch_track.xml"
     },
     {
+        "merged": "C:\\Users\\usuario\\Documents\\GitHub\\Votaciones\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_act_votar.xml.flat",
+        "source": "C:\\Users\\usuario\\Documents\\GitHub\\Votaciones\\app\\src\\main\\res\\layout\\activity_act_votar.xml"
+    },
+    {
         "merged": "C:\\Users\\usuario\\Documents\\GitHub\\Votaciones\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_disable_only_material_dark.xml.flat",
         "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\55254f7b0ef330914b2e5b6b92dd4572\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },

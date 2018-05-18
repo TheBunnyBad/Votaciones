@@ -88,6 +88,10 @@ public class ActMenuAdmin extends AppCompatActivity
                 break;
             case R.id.nav_registrar_candidatos:
                 fragment = new fgRegistrar();
+                break;
+            case R.id.nav_configuracion:
+                fragment = new fgAdministrarApp();
+                break;
         }
 
         if(fragment != null){

@@ -37,8 +37,29 @@ public class fgAdministrarApp extends Fragment {
         //you can set the title for your toolbar here for different fragments different titles}
         //Log.i("VIEW:", "" + getView().findViewById(R.id.etDNICandidato));
 
-        getView().findViewById(R.id.btnCambiarModoApp){
+        getView().findViewById(R.id.btnCambiarPass).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                App.alertDialogForPass(getContext());
+            }
+        });
 
-        }
+        updateUI();
+        getView().findViewById(R.id.btnCambiarModoApp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                App.switchAppMode(getContext());
+                updateUI();
+            }
+        });
+    }
+
+    private void updateUI(){
+        Button btnCambiarModo = getView().findViewById(R.id.btnCambiarModoApp);
+        btnCambiarModo.setText(btnCambiarModo
+                .getText()
+                .toString()
+                .replace("@", btnCambiarModo.getText().toString().equals(App.APP_MODE_REGISTRO) ? App.APP_MODE_VOTACIONES : App.APP_MODE_REGISTRO));
     }
 }
+

@@ -22,8 +22,8 @@ public class DBHelper extends SQLiteOpenHelper{
                                 "DNI TEXT PRIMARY KEY)";
 
 
-    private static final String createVotosTable = "CREATE TABLE votes (" +
-            "id integer primary key autoincrement," +
+    private static final String createVotosTable = "CREATE TABLE " + NAME_TB_VOTOS +
+            "(id integer primary key autoincrement," +
             "DNIcandidato text," +
             "DNIciudadano text," +
             "FOREIGN KEY(DNIcandidato) REFERENCES " + NAME_TB_CANDIDATOS + "(DNI)," +
@@ -47,5 +47,7 @@ public class DBHelper extends SQLiteOpenHelper{
         db.execSQL("DROP TABLE IF EXISTS " + NAME_TB_PERSONAS);
         db.execSQL("DROP TABLE IF EXISTS " + NAME_TB_VOTOS);
         db.execSQL(createCandidatosTable);
+        db.execSQL(createCiudadanosTable);
+        db.execSQL(createVotosTable);
     }
 }
