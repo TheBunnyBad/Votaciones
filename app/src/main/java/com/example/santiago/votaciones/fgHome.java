@@ -37,7 +37,6 @@ public class fgHome extends Fragment {
             case "Ciudadanos":
                 cargarListViewConPersonas();
                 break;
-
         }
     }
 
@@ -49,7 +48,9 @@ public class fgHome extends Fragment {
 
     private void cargarListViewConPersonas(){
         ListView lv = getView().findViewById(R.id.list_view_personas);
-        ArrayAdapter<Ciudadano> ca = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, App.getCiudadanos());
+        ArrayAdapter<Ciudadano> ca = new ArrayAdapter<Ciudadano>(getContext(),
+                android.R.layout.simple_list_item_1,
+                App.getCiudadanos());
         lv.setAdapter(ca);
     }
 }

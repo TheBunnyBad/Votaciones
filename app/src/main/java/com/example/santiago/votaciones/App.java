@@ -122,6 +122,7 @@ public class App {
      *          caso, en el inicio de la aplicación
      */
     private static void alertDialogForPass(final Context c){
+        Tools.
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(c);
 
         final EditText et = new EditText(c);

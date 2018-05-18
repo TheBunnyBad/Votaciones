@@ -36,5 +36,9 @@ public class fgAdministrarApp extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles}
         //Log.i("VIEW:", "" + getView().findViewById(R.id.etDNICandidato));
+
+        getView().findViewById(R.id.btnCambiarModoApp){
+
+        }
     }
 }
