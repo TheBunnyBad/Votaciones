@@ -22,6 +22,7 @@ import android.widget.Toast;
 public class fgRegistrar extends Fragment {
 
     Uri imageUri;
+    boolean selectedImg = false;
     private static final int PICK_IMAGE = 100;
 
     public fgRegistrar() {
@@ -45,7 +46,7 @@ public class fgRegistrar extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles}
-        ((Button)getView().findViewById(R.id.btnRegistrarCandidato)).setOnClickListener(new View.OnClickListener() {
+        ((Button)getView().findViewById(R.id.btnElegirImagen)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openGallery();
@@ -58,12 +59,12 @@ public class fgRegistrar extends Fragment {
                 EditText[] campos = {getView().findViewById(R.id.etNombreCandidato),
                         getView().findViewById(R.id.etDNICandidato),
                         getView().findViewById(R.id.etPartidoCandidato)};
-                if(Tools.formularioDiligenciado(campos)){
-                    App.guardarCandidato(new Candidato(campos[0].getText().toString(),
+                if(Tools.formularioDiligenciado(campos) && selectedImg){
+                    App.guardarCandidato(getContext(), new Candidato(campos[0].getText().toString(),
                             campos[1].getText().toString(),
-                            campos[2].getText().toString()));
+                            campos[2].getText().toString(),
+                            imageUri.toString()));
                     Tools.restartEdiTexts(campos);
-                    Toast.makeText(getContext(), "CANDIDATO REGISTRADO EXITOSAMENTE", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getContext(), "POR FAVOR DILIGENCIAR LOS CAMPOS", Toast.LENGTH_SHORT).show();
                 }
@@ -84,6 +85,7 @@ public class fgRegistrar extends Fragment {
         if(resultCode == Activity.RESULT_OK && requestCode == PICK_IMAGE){
             imageUri = data.getData();
             ((ImageView)getView().findViewById(R.id.imageUri)).setImageURI(imageUri);
+            selectedImg = true;
         }
     }
 }

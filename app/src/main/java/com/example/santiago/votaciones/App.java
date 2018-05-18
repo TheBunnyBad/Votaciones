@@ -24,8 +24,9 @@ public class App {
     private static DBHelper dbhelper;
     private static SQLiteDatabase sqLiteDatabase;
 
-    //// ARRAYLIST PARA CONTROLAR LOS CANDIDATOS
+    //// ARRAYLIST PARA CONTROLAR LOS DATOS
     private static ArrayList<Candidato> candidatos = new ArrayList<>();
+    private static ArrayList<Ciudadano> ciudadanos = new ArrayList<>();
 
     //// NOMBRE DE LAS SHAREDPREFS
     private static final String MY_PREFERENCES_NAME = "SHAREDPREF_PASS_KEY";
@@ -50,7 +51,6 @@ public class App {
     //////////////////////////////////////////////////
     //// MÉTODOS
     //////////////////////////////////////////////////
-
     public static void initApp(Context c){
         iniciarDB(c);
         loadPassword(c);
@@ -60,27 +60,35 @@ public class App {
     private static void iniciarDB(Context c){
         dbhelper = new DBHelper(c);
         sqLiteDatabase = dbhelper.getReadableDatabase();
+        cargarCandidatos();
+        cargarCiudadanos();
+        close();
+    }
 
-        String columns[] = {"Nombre", "DNI", "Partido"};
+    private static void cargarCandidatos(){
+        String columns[] = {"Nombre", "DNI", "Partido", "urlImg"};
         Cursor cursor = sqLiteDatabase.query(DBHelper.NAME_TB_CANDIDATOS,
                 columns,
-                null,
-                null,
-                null,
-                null,
-                null);
+                null,null,null,null,null);
         while ((cursor.moveToNext())){
             candidatos.add(new Candidato(cursor.getString(cursor.getColumnIndex("Nombre")),
                     cursor.getString(cursor.getColumnIndex("DNI")),
-                    cursor.getString(cursor.getColumnIndex("Partido"))));
+                    cursor.getString(cursor.getColumnIndex("Partido")),
+                    cursor.getString(cursor.getColumnIndex("urlImg"))));
         }
-        close();
-        printCandidatos();
     }
 
-    private static void printCandidatos(){
-        for(Candidato c : candidatos) Log.i("CANDIDATO", c.getNombre());
+    private static void cargarCiudadanos(){
+        String columns[] = {"Nombre", "DNI"};
+        Cursor cursor = sqLiteDatabase.query(DBHelper.NAME_TB_PERSONAS,
+                columns,
+                null,null,null,null,null);
+        while(cursor.moveToNext()){
+            ciudadanos.add(new Ciudadano(cursor.getString(cursor.getColumnIndex("Nombre")),
+                    cursor.getString(cursor.getColumnIndex("DNI"))));
+        }
     }
+
     private static void open(){
         sqLiteDatabase = dbhelper.getWritableDatabase();
     }
@@ -172,10 +180,33 @@ public class App {
         initApp(c);
     }
 
-    public static void guardarCandidato(Candidato cand){
-        candidatos.add(cand);
-        open();
-        sqLiteDatabase.insert(DBHelper.NAME_TB_CANDIDATOS, null, cand.getContentValues());
+    public static void guardarCandidato(Context ctx, Candidato cand) {
+        if (!ciudadanoRegistrado(cand)){
+            candidatos.add(cand);
+            open();
+            sqLiteDatabase.insert(DBHelper.NAME_TB_CANDIDATOS, null, cand.getContentValues());
+            Toast.makeText(ctx, "CANDIDATO REGISTRADO EXITOSAMENTE", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(ctx, "DNI YA EXISTE", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public static boolean ciudadanoRegistrado(Ciudadano ciudadano){
+        for(Ciudadano c : candidatos) if(c.getDNI().equals(ciudadano.getDNI())) return true;
+        for(Ciudadano c : ciudadanos) if(c.getDNI().equals(ciudadano.getDNI())) return true;
+        return false;
+    }
+
+    public static void guardarCiudadano(Context ctx, Ciudadano ciud){
+        if(!ciudadanoRegistrado(ciud)){
+            ciudadanos.add(ciud);
+            open();
+            sqLiteDatabase.insert(DBHelper.NAME_TB_PERSONAS, null, ciud.getContentValues());
+            Toast.makeText(ctx, "CÉDULA REGISTRADA EXITOSAMENTE", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(ctx, "CÉDULA YA REGISTRADA", Toast.LENGTH_SHORT).show();
+
+        }
     }
     //////////////////////////////////////////////////
     //// CAPSULED FIELDS
@@ -187,4 +218,6 @@ public class App {
     public static String getAppMode(){  return AppMode; }
 
     public static ArrayList<Candidato> getCandidatos(){ return candidatos; }
+
+    public static ArrayList<Ciudadano> getCiudadanos(){ return ciudadanos;  }
 }

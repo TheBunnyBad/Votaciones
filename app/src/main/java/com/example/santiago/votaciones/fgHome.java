@@ -35,7 +35,7 @@ public class fgHome extends Fragment {
                 cargarListViewConCandidatos();
                 break;
             case "Ciudadanos":
-
+                cargarListViewConPersonas();
                 break;
 
         }
@@ -43,12 +43,13 @@ public class fgHome extends Fragment {
 
     private void cargarListViewConCandidatos(){
         ListView lv = getView().findViewById(R.id.list_view_personas);
-        CustomAdapter ca = new CustomAdapter(getActivity(), App.getCandidatos());
+        CustomAdapterCandidato ca = new CustomAdapterCandidato(getActivity(), App.getCandidatos());
         lv.setAdapter(ca);
-        Log.i("OA", "AAAA");
     }
 
     private void cargarListViewConPersonas(){
-
+        ListView lv = getView().findViewById(R.id.list_view_personas);
+        ArrayAdapter<Ciudadano> ca = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, App.getCiudadanos());
+        lv.setAdapter(ca);
     }
 }

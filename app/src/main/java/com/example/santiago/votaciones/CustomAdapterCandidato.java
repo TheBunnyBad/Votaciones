@@ -1,5 +1,7 @@
 package com.example.santiago.votaciones;
 import android.app.Activity;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,13 +11,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends ArrayAdapter<Candidato> {
+public class CustomAdapterCandidato extends ArrayAdapter<Candidato> {
 
     private final Activity context;
     private final ArrayList<Candidato> candidatos;
 
 
-    public CustomAdapter(Activity context, ArrayList<Candidato> candidatos) {
+    public CustomAdapterCandidato(Activity context, ArrayList<Candidato> candidatos) {
         super(context, R.layout.mylist, candidatos);
         // TODO Auto-generated constructor stub
 
@@ -32,7 +34,8 @@ public class CustomAdapter extends ArrayAdapter<Candidato> {
         TextView extratxt = (TextView) rowView.findViewById(R.id.textView1);
 
         txtTitle.setText(candidatos.get(position).getNombre());
-        //imageView.setImageBitmap();
+        imageView.setImageURI(candidatos.get(position).getURI());
+        Log.i("DATO", candidatos.get(position).getURI().getPath());
         extratxt.setText("Partido político: "+ candidatos.get(position).getPartido());
         return rowView;
 

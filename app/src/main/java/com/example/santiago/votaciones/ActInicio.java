@@ -37,10 +37,33 @@ public class ActInicio extends AppCompatActivity {
                     }
                 });
 
-        Button b = findViewById(R.id.btnAccionCiudadano);
-        b.setText(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? "REGISTRAR CÉDULA" : "VOTAR");
+        ((EditText)findViewById(R.id.txtNombre))
+                .setEnabled(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? true : false);
+        Button botonCiudadano = findViewById(R.id.btnAccionCiudadano);
+        botonCiudadano.setText(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? "REGISTRAR CÉDULA" : "VOTAR");
+        botonCiudadano.setOnClickListener(App.getAppMode().equals(App.APP_MODE_REGISTRO) ? registrarCedula() : irAVotaciones());
     }
 
+
+    private View.OnClickListener registrarCedula(){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                App.guardarCiudadano(getApplicationContext(), new Ciudadano(((EditText)findViewById(R.id.txtNombre)).getText().toString(),
+                        ((EditText)findViewById(R.id.txtNombre)).getText().toString()));
+            }
+        };
+    }
+
+    private View.OnClickListener irAVotaciones(){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(App.ciudadanoRegistrado(new Ciudadano("ANON",
+                        ((EditText)findViewById(R.id.txtCedula)).getText().toString())));
+            }
+        };
+    }
 
     /**
      * Muestra un pop up con un EditText, en el cual el usuario va a ingresar la contraseña

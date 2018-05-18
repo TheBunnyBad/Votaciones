@@ -1,48 +1,39 @@
 package com.example.santiago.votaciones;
 
 import android.content.ContentValues;
+import android.net.Uri;
 
-public class Candidato {
-    private String nombre;
-    private String DNI;
+public class Candidato extends Ciudadano{
     private String partido;
+    private String url;
 
-    public Candidato(String n, String d, String p){
-        this.nombre = n;
-        this.DNI = d;
+    public Candidato(String n, String d, String p, String url){
+        super(n, d);
         this.partido = p;
+        this.url = url;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getDNI() {
         return DNI;
-    }
-
-    public void setDNI(String DNI) {
-        this.DNI = DNI;
     }
 
     public String getPartido() {
         return partido;
     }
 
-    public void setPartido(String partido) {
-        this.partido = partido;
+    public Uri getURI(){
+        return Uri.parse(url);
     }
 
 
     public ContentValues getContentValues(){
-        ContentValues cv = new ContentValues();
-        cv.put("Nombre", nombre);
-        cv.put("DNI", DNI);
+        ContentValues cv = super.getContentValues();
         cv.put("Partido", partido);
+        cv.put("urlImg", url);
         return cv;
     }
 
