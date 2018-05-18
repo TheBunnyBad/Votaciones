@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/santiago/AndroidStudioProjects/Votaciones/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
+            "outputFile": "C:\\Users\\usuario\\Documents\\GitHub\\Votaciones\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ur\\values-ur.xml",
             "map": [
                 {
-                    "source": "/home/santiago/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7d51d08dc5ca5f40fe49acbb1a8a943/res/values-ur/values-ur.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,321,430,516,620,740,816,892,977,1085,1194,1296,1407,1507,1615,1780,1878",
-                        "endColumns": "109,105,108,85,103,119,75,75,84,107,108,101,110,99,107,164,97,79",
-                        "endOffsets": "210,316,425,511,615,735,811,887,972,1080,1189,1291,1402,1502,1610,1775,1873,1953"
-                    }
-                },
-                {
-                    "source": "/home/santiago/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af5ebafc5222de7e3cbb0756452ffb75/res/values-ur/values-ur.xml",
+                    "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\15c27aa62506d8e638ec70440243554d\\res\\values-ur\\values-ur.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -28,6 +18,16 @@
                         "startOffsets": "1958",
                         "endColumns": "102",
                         "endOffsets": "2056"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\55254f7b0ef330914b2e5b6b92dd4572\\res\\values-ur\\values-ur.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,215,321,430,516,620,740,816,892,977,1085,1194,1296,1407,1507,1615,1780,1878",
+                        "endColumns": "109,105,108,85,103,119,75,75,84,107,108,101,110,99,107,164,97,79",
+                        "endOffsets": "210,316,425,511,615,735,811,887,972,1080,1189,1291,1402,1502,1610,1775,1873,1953"
                     }
                 }
             ]

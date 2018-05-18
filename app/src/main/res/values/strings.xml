@@ -24,4 +24,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_act_menu_admin">ActMenuAdmin</string>
+
+    <string-array name="tipos_de_persona">
+        <item>Candidatos</item>
+        <item>Ciudadanos</item>
+    </string-array>
 </resources>

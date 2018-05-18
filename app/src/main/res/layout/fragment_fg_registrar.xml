@@ -5,10 +5,65 @@
     android:layout_height="match_parent"
     tools:context=".fgRegistrar">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/rlFrame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
+        <EditText
+            android:id="@+id/etNombreCandidato"
+            android:hint="Nombre"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etDNICandidato"
+            android:hint="DNI"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_below="@+id/etNombreCandidato"/>
+
+        <EditText
+            android:id="@+id/etPartidoCandidato"
+            android:hint="Partido politico"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etDNICandidato"/>
+
+        <Button
+            android:id="@+id/btnElegirImagen"
+            android:text="Selecciona imagen"
+            android:layout_below="@+id/etPartidoCandidato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:enabled="false"
+            android:hint="URL"
+            android:id="@+id/etUrl"
+            android:gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/etPartidoCandidato"
+            android:layout_toRightOf="@+id/btnElegirImagen"/>
+
+        <Button
+            android:id="@+id/btnRegistrarCandidato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnElegirImagen"
+            android:gravity="center"
+            android:text="Registrar" />
+
+        <ImageView
+            android:layout_below="@id/btnRegistrarCandidato"
+            android:id="@+id/imageUri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
 </FrameLayout>

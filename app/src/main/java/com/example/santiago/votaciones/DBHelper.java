@@ -14,7 +14,8 @@ public class DBHelper extends SQLiteOpenHelper{
     private static final String createCandidatosTable = "CREATE TABLE " + NAME_TB_CANDIDATOS +
                                 "(Nombre TEXT," +
                                 "DNI TEXT PRIMARY KEY," +
-                                "Partido TEXT)";
+                                "Partido TEXT," +
+                                "urlImg TEXT)";
 
     public DBHelper(Context context) {
         super(context, DB_NAME, null, 1);
@@ -23,7 +24,8 @@ public class DBHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(createCandidatosTable);
-        db.execSQL("INSERT INTO tbCandidatos VALUES('Voto en blanco','1234','Ninguno mi pa')");
+
+        db.execSQL("INSERT INTO tbCandidatos VALUES('Voto en blanco','1234','Campaña del blanco', '')");
     }
 
     @Override

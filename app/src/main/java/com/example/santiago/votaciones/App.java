@@ -1,18 +1,31 @@
 package com.example.santiago.votaciones;
 
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class App {
     //////////////////////////////////////////////////
     //// ATRIBUTOS
     //////////////////////////////////////////////////
+
+    //// DBOpenHelper
+    private static DBHelper dbhelper;
+    private static SQLiteDatabase sqLiteDatabase;
+
+    //// ARRAYLIST PARA CONTROLAR LOS CANDIDATOS
+    private static ArrayList<Candidato> candidatos = new ArrayList<>();
 
     //// NOMBRE DE LAS SHAREDPREFS
     private static final String MY_PREFERENCES_NAME = "SHAREDPREF_PASS_KEY";
@@ -39,10 +52,48 @@ public class App {
     //////////////////////////////////////////////////
 
     public static void initApp(Context c){
+        iniciarDB(c);
         loadPassword(c);
         loadAppMode(c);
     }
 
+    private static void iniciarDB(Context c){
+        dbhelper = new DBHelper(c);
+        sqLiteDatabase = dbhelper.getReadableDatabase();
+
+        String columns[] = {"Nombre", "DNI", "Partido"};
+        Cursor cursor = sqLiteDatabase.query(DBHelper.NAME_TB_CANDIDATOS,
+                columns,
+                null,
+                null,
+                null,
+                null,
+                null);
+        while ((cursor.moveToNext())){
+            candidatos.add(new Candidato(cursor.getString(cursor.getColumnIndex("Nombre")),
+                    cursor.getString(cursor.getColumnIndex("DNI")),
+                    cursor.getString(cursor.getColumnIndex("Partido"))));
+        }
+        close();
+        printCandidatos();
+    }
+
+    private static void printCandidatos(){
+        for(Candidato c : candidatos) Log.i("CANDIDATO", c.getNombre());
+    }
+    private static void open(){
+        sqLiteDatabase = dbhelper.getWritableDatabase();
+    }
+
+    private static void close(){
+        sqLiteDatabase.close();
+    }
+
+
+    /**
+     * Carga el password del admin de la aplicación al inicio de la ejecución del programa
+     * @param c
+     */
     private static void loadPassword(Context c){
         SharedPreferences prefs = c.getSharedPreferences(MY_PREFERENCES_NAME,
                 Context.MODE_PRIVATE);
@@ -121,6 +172,11 @@ public class App {
         initApp(c);
     }
 
+    public static void guardarCandidato(Candidato cand){
+        candidatos.add(cand);
+        open();
+        sqLiteDatabase.insert(DBHelper.NAME_TB_CANDIDATOS, null, cand.getContentValues());
+    }
     //////////////////////////////////////////////////
     //// CAPSULED FIELDS
     //////////////////////////////////////////////////
@@ -129,4 +185,6 @@ public class App {
     public static void setPass(String p){   pass = p;   }
 
     public static String getAppMode(){  return AppMode; }
+
+    public static ArrayList<Candidato> getCandidatos(){ return candidatos; }
 }

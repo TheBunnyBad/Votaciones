@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/santiago/AndroidStudioProjects/Votaciones/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "C:\\Users\\usuario\\Documents\\GitHub\\Votaciones\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rTW\\values-zh-rTW.xml",
             "map": [
                 {
-                    "source": "/home/santiago/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/a7d51d08dc5ca5f40fe49acbb1a8a943/res/values-zh-rTW/values-zh-rTW.xml",
+                    "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\55254f7b0ef330914b2e5b6b92dd4572\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/santiago/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af5ebafc5222de7e3cbb0756452ffb75/res/values-zh-rTW/values-zh-rTW.xml",
+                    "source": "C:\\Users\\usuario\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\15c27aa62506d8e638ec70440243554d\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

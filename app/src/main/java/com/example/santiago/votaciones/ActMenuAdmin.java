@@ -1,5 +1,6 @@
 package com.example.santiago.votaciones;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -83,9 +84,9 @@ public class ActMenuAdmin extends AppCompatActivity
 
         switch (item.getItemId()){
             case R.id.nav_home:
-                fragment = new fgRegistrar();
+                fragment = new fgHome();
                 break;
-            default:
+            case R.id.nav_registrar_candidatos:
                 fragment = new fgRegistrar();
         }
 
@@ -99,4 +100,6 @@ public class ActMenuAdmin extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

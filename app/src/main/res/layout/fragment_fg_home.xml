@@ -6,40 +6,24 @@
     tools:context=".fgHome">
 
     <RelativeLayout
+        android:id="@+id/relative_layout_menu_admin_inicio"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/etNombreCandidato"
-            android:hint="Nombre"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/etDNICandidato"
-            android:hint="DNI"
-            android:gravity="center"
+        <Spinner
+            android:id="@+id/spnPersonas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:layout_below="@+id/etNombreCandidato"/>
-
-        <EditText
-            android:id="@+id/etPartidoCandidato"
-            android:hint="Partido politico"
             android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/etDNICandidato"/>
+            android:entries="@array/tipos_de_persona">
+        </Spinner>
 
-        <Button
-            android:id="@+id/btnRegistrarCandidato"
-            android:text="Registrar"
-            android:gravity="center"
+        <ListView
+            android:id="@+id/list_view_personas"
+            android:layout_below="@+id/spnPersonas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/etPartidoCandidato"/>
-
+            android:layout_height="wrap_content">
+        </ListView>
     </RelativeLayout>
+
 </FrameLayout>
