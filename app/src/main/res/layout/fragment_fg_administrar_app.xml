@@ -11,19 +11,26 @@
 
 
         <Button
-            android:text="Cambiar contraseña"
             android:id="@+id/btnCambiarPass"
-            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/button_style"
+            android:gravity="center"
+            android:text="Cambiar contraseña" />
 
         <Button
-            android:text="MODO: @"
             android:id="@+id/btnCambiarModoApp"
-            android:gravity="center"
-            android:layout_below="@id/btnCambiarPass"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="114dp"
+            android:background="@drawable/button_style"
+            android:gravity="center"
+            android:text="MODO: @" />
 
     </RelativeLayout>
 

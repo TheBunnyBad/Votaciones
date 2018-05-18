@@ -2037,7 +2037,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
@@ -3613,37 +3613,38 @@ public final class R {
     public static final int abc_vector_test=0x7f080058;
     public static final int avd_hide_password=0x7f080059;
     public static final int avd_show_password=0x7f08005a;
-    public static final int design_bottom_navigation_item_background=0x7f08005b;
-    public static final int design_fab_background=0x7f08005c;
-    public static final int design_ic_visibility=0x7f08005d;
-    public static final int design_ic_visibility_off=0x7f08005e;
-    public static final int design_password_eye=0x7f08005f;
-    public static final int design_snackbar_background=0x7f080060;
-    public static final int ic_launcher_background=0x7f080061;
-    public static final int ic_menu_camera=0x7f080062;
-    public static final int ic_menu_gallery=0x7f080063;
-    public static final int ic_menu_inicio=0x7f080064;
-    public static final int ic_menu_manage=0x7f080065;
-    public static final int ic_menu_registrar_candidato=0x7f080066;
-    public static final int ic_menu_send=0x7f080067;
-    public static final int ic_menu_share=0x7f080068;
-    public static final int ic_menu_slideshow=0x7f080069;
-    public static final int navigation_empty_icon=0x7f08006a;
-    public static final int notification_action_background=0x7f08006b;
-    public static final int notification_bg=0x7f08006c;
-    public static final int notification_bg_low=0x7f08006d;
-    public static final int notification_bg_low_normal=0x7f08006e;
-    public static final int notification_bg_low_pressed=0x7f08006f;
-    public static final int notification_bg_normal=0x7f080070;
-    public static final int notification_bg_normal_pressed=0x7f080071;
-    public static final int notification_icon_background=0x7f080072;
-    public static final int notification_template_icon_bg=0x7f080073;
-    public static final int notification_template_icon_low_bg=0x7f080074;
-    public static final int notification_tile_bg=0x7f080075;
-    public static final int notify_panel_notification_icon_bg=0x7f080076;
-    public static final int side_nav_bar=0x7f080077;
-    public static final int tooltip_frame_dark=0x7f080078;
-    public static final int tooltip_frame_light=0x7f080079;
+    public static final int button_style=0x7f08005b;
+    public static final int design_bottom_navigation_item_background=0x7f08005c;
+    public static final int design_fab_background=0x7f08005d;
+    public static final int design_ic_visibility=0x7f08005e;
+    public static final int design_ic_visibility_off=0x7f08005f;
+    public static final int design_password_eye=0x7f080060;
+    public static final int design_snackbar_background=0x7f080061;
+    public static final int ic_launcher_background=0x7f080062;
+    public static final int ic_menu_camera=0x7f080063;
+    public static final int ic_menu_gallery=0x7f080064;
+    public static final int ic_menu_inicio=0x7f080065;
+    public static final int ic_menu_manage=0x7f080066;
+    public static final int ic_menu_registrar_candidato=0x7f080067;
+    public static final int ic_menu_send=0x7f080068;
+    public static final int ic_menu_share=0x7f080069;
+    public static final int ic_menu_slideshow=0x7f08006a;
+    public static final int navigation_empty_icon=0x7f08006b;
+    public static final int notification_action_background=0x7f08006c;
+    public static final int notification_bg=0x7f08006d;
+    public static final int notification_bg_low=0x7f08006e;
+    public static final int notification_bg_low_normal=0x7f08006f;
+    public static final int notification_bg_low_pressed=0x7f080070;
+    public static final int notification_bg_normal=0x7f080071;
+    public static final int notification_bg_normal_pressed=0x7f080072;
+    public static final int notification_icon_background=0x7f080073;
+    public static final int notification_template_icon_bg=0x7f080074;
+    public static final int notification_template_icon_low_bg=0x7f080075;
+    public static final int notification_tile_bg=0x7f080076;
+    public static final int notify_panel_notification_icon_bg=0x7f080077;
+    public static final int side_nav_bar=0x7f080078;
+    public static final int tooltip_frame_dark=0x7f080079;
+    public static final int tooltip_frame_light=0x7f08007a;
   }
   public static final class id {
     public static final int ALT=0x7f090000;
@@ -9119,7 +9120,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>for now only direct & barriers</td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>3</td><td></td></tr>
      * </table>
